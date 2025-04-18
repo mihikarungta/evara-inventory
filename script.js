@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize date pickers
     flatpickr('.date-picker', {
         dateFormat: 'Y-m-d',
-        allowInput: true
+        allowInput: true,
+        disableMobile: false,
+        static: true,
+        monthSelectorType: 'static',
+        position: 'auto',
+        appendTo: document.body,
+        onOpen: function(selectedDates, dateStr, instance) {
+            instance.calendarContainer.style.zIndex = '9999';
+        }
     });
 
     // Tab switching functionality
