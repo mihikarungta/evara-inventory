@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize date pickers
-    flatpickr('.date-picker', {
+    flatpickr('.flatpickr', {
         dateFormat: 'Y-m-d',
         allowInput: true,
         disableMobile: false,
