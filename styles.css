@@ -422,4 +422,33 @@ button {
 .remove-group-btn:hover {
     color: #5a0030;
     text-decoration: underline;
+}
+
+/* Date input specific styles */
+.custom-date-input {
+    text-align: left !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* Override Flatpickr's default styles */
+.flatpickr-input {
+    text-align: left !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* Mobile specific overrides */
+@media (max-width: 768px) {
+    .custom-date-input {
+        text-align: left !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+    .flatpickr-input {
+        text-align: left !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
 } 
