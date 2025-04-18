@@ -272,7 +272,13 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    text-align: left;
+    text-align: left !important;
+    direction: ltr;
+}
+
+/* Override Flatpickr's default text alignment */
+.flatpickr-input {
+    text-align: left !important;
 }
 
 /* Flatpickr overrides */
@@ -363,6 +369,14 @@ button {
 
     .flatpickr-current-month {
         font-size: 1.2rem;
+    }
+
+    .date-picker {
+        text-align: left !important;
+    }
+    
+    .flatpickr-input {
+        text-align: left !important;
     }
 }
 
