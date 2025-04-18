@@ -424,11 +424,17 @@ button {
     text-decoration: underline;
 }
 
-/* Date input specific styles */
-.custom-date-input {
+/* Date input wrapper styles */
+.custom-date-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.custom-date-wrapper input {
     text-align: left !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
+    direction: ltr !important;
 }
 
 /* Override Flatpickr's default styles */
@@ -436,19 +442,22 @@ button {
     text-align: left !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
+    direction: ltr !important;
 }
 
 /* Mobile specific overrides */
 @media (max-width: 768px) {
-    .custom-date-input {
+    .custom-date-wrapper input {
         text-align: left !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
+        direction: ltr !important;
     }
     
     .flatpickr-input {
         text-align: left !important;
         padding-left: 10px !important;
         padding-right: 10px !important;
+        direction: ltr !important;
     }
 } 
