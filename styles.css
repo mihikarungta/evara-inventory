@@ -437,4 +437,28 @@ button {
         padding-right: 10px !important;
         direction: ltr !important;
     }
+}
+
+/* Making charges input specific styles */
+input[type="number"][id$="making-charges"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: white;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="number"][id$="making-charges"]::-webkit-outer-spin-button,
+input[type="number"][id$="making-charges"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"][id$="making-charges"] {
+    -moz-appearance: textfield;
 } 
