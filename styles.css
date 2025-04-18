@@ -260,14 +260,13 @@ button {
     background-color: #5a0030;
 }
 
-/* Date input wrapper */
-.date-input-wrapper {
+/* Date input styles */
+.date-input-container {
     position: relative;
     width: 100%;
 }
 
-/* Date picker input */
-.date-picker {
+.date-input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -275,126 +274,45 @@ button {
     font-size: 1rem;
     background-color: white;
     color: #333;
+    text-align: left;
+    direction: ltr;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    text-align: left !important;
-    direction: ltr;
 }
 
-/* Override Flatpickr's default text alignment */
+/* Override Flatpickr styles */
 .flatpickr-input {
     text-align: left !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    direction: ltr !important;
 }
 
-/* Flatpickr overrides */
-.flatpickr-calendar {
-    font-family: Arial, sans-serif;
-    background: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
+/* Remove any default browser styles */
+input[type="text"].date-input::-webkit-datetime-edit {
+    text-align: left;
+    padding-left: 0;
 }
 
-.flatpickr-months {
-    background: #770041;
-    color: white;
-    padding: 10px;
-}
-
-.flatpickr-current-month {
-    color: white;
-    font-size: 1.1rem;
-}
-
-.flatpickr-monthDropdown-months {
-    color: white;
-    font-size: 1.1rem;
-}
-
-.flatpickr-weekday {
-    color: #666;
-    font-weight: normal;
-}
-
-.flatpickr-day {
-    color: #333;
-    border: 1px solid transparent;
-    height: 35px;
-    line-height: 35px;
-    font-size: 1rem;
-}
-
-.flatpickr-day.selected {
-    background: #770041;
-    border-color: #770041;
-    color: white;
-}
-
-.flatpickr-day.today {
-    border-color: #770041;
-}
-
-.flatpickr-day.today:hover {
-    background: #f0f0f0;
-    border-color: #770041;
-}
-
-.flatpickr-day:hover {
-    background: #f0f0f0;
-    border-color: #ddd;
-}
-
-.flatpickr-day.flatpickr-disabled,
-.flatpickr-day.flatpickr-disabled:hover {
-    color: #999;
-    background: #f5f5f5;
+input[type="text"].date-input::-webkit-calendar-picker-indicator {
+    display: none;
 }
 
 /* Mobile specific overrides */
 @media (max-width: 768px) {
-    .tabs {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: visible;
-    }
-
-    .tab-btn {
-        padding: 10px 6px;
-        font-size: 0.85rem;
-        line-height: 1.2;
-    }
-
-    .flatpickr-calendar {
-        position: fixed !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        width: 90% !important;
-        max-width: 350px !important;
-    }
-
-    .flatpickr-day {
-        height: 40px;
-        line-height: 40px;
-        font-size: 1.1rem;
-    }
-
-    .flatpickr-months {
-        padding: 15px;
-    }
-
-    .flatpickr-current-month {
-        font-size: 1.2rem;
-    }
-
-    .date-picker {
-        text-align: left !important;
+    .date-input {
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        direction: ltr;
     }
     
     .flatpickr-input {
         text-align: left !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        direction: ltr !important;
     }
 }
 
