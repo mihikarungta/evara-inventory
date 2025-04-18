@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVARA Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header>
+        <h1>EVARA</h1>
+    </header>
+
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="vendor">Vendor</button>
+            <button class="tab-btn" data-tab="karigar">Karigar</button>
+            <button class="tab-btn" data-tab="new-item">Add New Item</button>
+            <button class="tab-btn" data-tab="status">Item Status Update</button>
+        </div>
+
+        <div class="tab-content">
+            <!-- Vendor Tab -->
+            <div id="vendor" class="tab-pane active">
+                <form id="vendor-form">
+                    <div class="form-group">
+                        <label for="vendor-reason">Reason</label>
+                        <select id="vendor-reason" required>
+                            <option value="">Select Reason</option>
+                            <option value="purchase">Purchase</option>
+                            <option value="return">Return</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-date">Date</label>
+                        <input type="text" id="vendor-date" class="date-picker" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-product">Product</label>
+                        <select id="vendor-product" required>
+                            <option value="">Select Product</option>
+                            <option value="diamond">Diamond</option>
+                            <option value="stones">Stones</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-type">Type</label>
+                        <select id="vendor-type" required>
+                            <option value="">Select Type</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-quantity">Quantity</label>
+                        <input type="number" id="vendor-quantity" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-weight">Weight</label>
+                        <div class="weight-input">
+                            <input type="number" id="vendor-weight" step="0.01" required>
+                            <span class="weight-unit"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-name">Vendor</label>
+                        <select id="vendor-name" required>
+                            <option value="">Select Vendor</option>
+                            <option value="greenlab">GreenLab</option>
+                            <option value="xyz">XYZ</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vendor-amount">Amount (₹)</label>
+                        <input type="number" id="vendor-amount" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Payment Mode</label>
+                        <div class="payment-mode">
+                            <div>
+                                <label for="cash-percentage">Cash (%)</label>
+                                <input type="number" id="cash-percentage" min="0" max="100" required>
+                            </div>
+                            <div>
+                                <label for="online-percentage">Online (%)</label>
+                                <input type="number" id="online-percentage" min="0" max="100" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+
+            <!-- Karigar Tab -->
+            <div id="karigar" class="tab-pane">
+                <form id="karigar-form">
+                    <div class="form-group">
+                        <label for="karigar-reason">Reason</label>
+                        <select id="karigar-reason" required>
+                            <option value="">Select Reason</option>
+                            <option value="give">Give</option>
+                            <option value="back-to-stock">Back to stock</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="karigar-date">Date</label>
+                        <input type="text" id="karigar-date" class="date-picker" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="karigar-product">Product</label>
+                        <select id="karigar-product" required>
+                            <option value="">Select Product</option>
+                            <option value="diamond">Diamond</option>
+                            <option value="stones">Stones</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="karigar-type">Type</label>
+                        <select id="karigar-type" required>
+                            <option value="">Select Type</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="karigar-quantity">Quantity</label>
+                        <input type="number" id="karigar-quantity" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="karigar-weight">Weight</label>
+                        <div class="weight-input">
+                            <input type="number" id="karigar-weight" step="0.01" required>
+                            <span class="weight-unit"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="karigar-name">Karigar</label>
+                        <select id="karigar-name" required>
+                            <option value="">Select Karigar</option>
+                            <option value="mohan">Mohan</option>
+                            <option value="abc">ABC</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+
+            <!-- Add New Item Tab -->
+            <div id="new-item" class="tab-pane">
+                <form id="new-item-form">
+                    <div class="form-group">
+                        <label for="new-item-date">Date</label>
+                        <input type="text" id="new-item-date" class="date-picker" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-item-type">Item</label>
+                        <select id="new-item-type" required>
+                            <option value="">Select Item</option>
+                            <option value="ring">Ring</option>
+                            <option value="necklace">Necklace</option>
+                            <option value="bracelet">Bracelet</option>
+                            <option value="tops">Tops</option>
+                            <option value="loops">Loops</option>
+                            <option value="choori">Choori</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-item-karigar">Karigar</label>
+                        <select id="new-item-karigar" required>
+                            <option value="">Select Karigar</option>
+                            <option value="mohan">Mohan</option>
+                            <option value="abc">ABC</option>
+                        </select>
+                    </div>
+
+                    <div id="item-groups">
+                        <div class="item-group">
+                            <button type="button" class="remove-group-btn" style="display: none;">Remove</button>
+                            <div class="form-group">
+                                <label>Product</label>
+                                <select class="item-product" required>
+                                    <option value="">Select Product</option>
+                                    <option value="diamond">Diamond</option>
+                                    <option value="stones">Stones</option>
+                                    <option value="gold">Gold</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Type</label>
+                                <select class="item-type" required>
+                                    <option value="">Select Type</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Weight</label>
+                                <div class="weight-input">
+                                    <input type="number" class="item-weight" step="0.01" required>
+                                    <span class="weight-unit"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                <input type="number" class="item-quantity" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="add-item-group" class="add-btn">+ Add More Details</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+
+            <!-- Item Status Update Tab -->
+            <div id="status" class="tab-pane">
+                <form id="status-form">
+                    <div class="form-group">
+                        <label for="status-item">Item</label>
+                        <select id="status-item" required>
+                            <option value="">Select Item</option>
+                            <option value="ring">Ring</option>
+                            <option value="necklace">Necklace</option>
+                            <option value="bracelet">Bracelet</option>
+                            <option value="tops">Tops</option>
+                            <option value="loops">Loops</option>
+                            <option value="choori">Choori</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status-code">Code</label>
+                        <select id="status-code" required>
+                            <option value="">Select Code</option>
+                            <option value="er">ER</option>
+                            <option value="en">EN</option>
+                            <option value="eb">EB</option>
+                            <option value="et">ET</option>
+                            <option value="el">EL</option>
+                            <option value="ec">EC</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" id="return-karigar" class="action-btn">Return to Karigar</button>
+                        <button type="button" id="sell" class="action-btn">Sell</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
