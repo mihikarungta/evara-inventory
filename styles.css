@@ -260,16 +260,6 @@ button {
     width: 100%;
 }
 
-.date-input-wrapper::after {
-    content: "📅";
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #770041;
-}
-
 /* Date picker input */
 .date-picker {
     width: 100%;
@@ -282,6 +272,7 @@ button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    text-align: left;
 }
 
 /* Flatpickr overrides */
